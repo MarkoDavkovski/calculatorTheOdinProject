@@ -28,13 +28,18 @@ body {
 	width: 350px;
 	height: 100px;
 	background-color: #808080f1;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: space-around;
 }
-.buttons {
+.buttons-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
 	width: 350px;
 	height: 400px;
+	cursor: pointer;
 }
 .btn {
 	font-size: 25px;
@@ -62,15 +67,15 @@ input {
 	background-color: transparent;
 	font-size: 30px;
 }
-.currentOperation {
+.currOutput {
 	font-size: 40px;
-	width: 95%;
-	height: 60%;
-	text-align: right;
+	margin-right: 15px;
 }
-.previousOperation {
+.prevOutput {
 	font-size: 25px;
-	width: 95%;
-	height: 40%;
-	text-align: right;
+	margin-right: 15px;
+	color: rgb(0, 0, 0, 0.7);
+}
+.clearBtn:hover {
+	background-color: #ff7a7a;
 }

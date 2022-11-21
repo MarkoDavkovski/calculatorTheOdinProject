@@ -7,34 +7,38 @@
 		<title>CalculatorTOP</title>
 		<link rel="stylesheet" href="reset.css" />
 		<link rel="stylesheet" href="style.css" />
-		<script src="main.js"></script>
+		<script src="main.js" defer></script>
 	</head>
 	<body>
 		<div class="calc">
 			<!-- <h1>Calculator</h1> -->
 			<div class="display">
-				<div class="previousOperation"></div>
-				<div class="currentOperation">0</div>
+				<div class="prevOutput"></div>
+				<div class="currOutput"></div>
 			</div>
-			<div class="buttons">
-				<button class="btn delBtn">Delete</button>
-				<button class="btn clearBtn">Clear</button>
+			<div class="buttons-grid">
+				<button class="btn delBtn" data-delete onclick="del()">Delete</button>
+				<button class="btn clearBtn" data-clear onclick="clearFun()">
+					Clear
+				</button>
 				<button class="btn numberBtn" data-number>7</button>
 				<button class="btn numberBtn" data-number>8</button>
 				<button class="btn numberBtn" data-number>9</button>
-				<button class="btn operationBtn">÷</button>
+				<button class="btn operationBtn" data-operation>÷</button>
 				<button class="btn numberBtn" data-number>4</button>
 				<button class="btn numberBtn" data-number>5</button>
 				<button class="btn numberBtn" data-number>6</button>
-				<button class="btn operationBtn">x</button>
+				<button class="btn operationBtn" data-operation>x</button>
 				<button class="btn numberBtn" data-number>1</button>
 				<button class="btn numberBtn" data-number>2</button>
 				<button class="btn numberBtn" data-number>3</button>
-				<button class="btn operationBtn">-</button>
-				<button class="btn operationBtn">.</button>
+				<button class="btn operationBtn" data-operation>-</button>
+				<button class="btn operationBtn" data-decimal>.</button>
 				<button class="btn numberBtn" data-number>0</button>
-				<button class="btn operationBtn" id="equals">=</button>
-				<button class="btn operationBtn">+</button>
+				<button class="btn operationBtn" data-equals onClick="equals()">
+					=
+				</button>
+				<button class="btn operationBtn" data-operation>+</button>
 			</div>
 		</div>
 	</body>
