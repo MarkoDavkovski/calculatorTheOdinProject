@@ -32,6 +32,7 @@ body {
 	flex-direction: column;
 	align-items: end;
 	justify-content: space-around;
+	border: 2px solid #285943;
 }
 .buttons-grid {
 	display: grid;
@@ -50,23 +51,13 @@ body {
 }
 .btn,
 .display {
-	border: 2px solid #285943;
 	border-radius: 5px;
 }
 .delBtn,
 .clearBtn {
 	grid-column: span 2;
 }
-/* .equal {
-	grid-column: span 2;
-} */
-input {
-	width: 100%;
-	height: 100%;
-	border: none;
-	background-color: transparent;
-	font-size: 30px;
-}
+
 .currOutput {
 	font-size: 40px;
 	margin-right: 15px;
@@ -76,6 +67,34 @@ input {
 	margin-right: 15px;
 	color: rgb(0, 0, 0, 0.7);
 }
+.delBtn {
+	border: 2px solid #fca24e;
+}
+.clearBtn {
+	border: 2px solid #ff7a7a;
+}
 .clearBtn:hover {
 	background-color: #ff7a7a;
+}
+.delBtn:hover {
+	background-color: #fca24e;
+}
+
+.numberBtn {
+	border: 2px solid skyblue;
+}
+.operationBtn {
+	border: 2px solid #9477af;
+}
+.numberBtn:hover {
+	background-color: skyblue;
+}
+.operationBtn:hover {
+	background-color: #9477af;
+}
+.decimal {
+	border: 2px solid #4efc9c;
+}
+.decimal:hover {
+	background-color: #4efc9c;
 }

@@ -9,6 +9,7 @@ const clearBtn = document.querySelector('[clearBtn]');
 const equalsBtn = document.querySelector('[data-equals]');
 const currOutput = document.querySelector('.currOutput');
 const prevOutput = document.querySelector('.prevOutput');
+const decimal = document.querySelector('[data-decimal]');
 
 numBtn.forEach((btn) => {
 	btn.addEventListener('click', (e) => {
@@ -16,7 +17,14 @@ numBtn.forEach((btn) => {
 	});
 });
 
+function addDecimal() {
+	if (currOutput.textContent.includes('.')) return;
+	currNum += '.';
+	currOutput.textContent = currNum;
+}
+
 function handleNumber(num) {
+	if (currNum.length > 15) return;
 	currNum += num;
 	currOutput.textContent = currNum;
 }
@@ -28,8 +36,7 @@ operationBtn.forEach((op) => {
 });
 
 function handleOperator(op) {
-	currNum = currOutput.textContent;
-	currNum = parseInt(currNum);
+	if (operator != '') equals();
 	operator = op;
 	prevNum = currNum;
 	currNum = '';
@@ -39,17 +46,20 @@ function handleOperator(op) {
 
 function equals() {
 	prevOutput.textContent = prevOutput.textContent + ' ' + currNum;
-	// currNum = parseInt(currNum);
-	// prevNum = parseInt(prevNum);
 	currOutput.textContent = operate(operator, prevNum, currNum);
+	currNum = currOutput.textContent;
+	operator = '';
 }
 
-function del() {}
+function del() {
+	currOutput.textContent = currOutput.textContent.toString().slice(0, -1);
+	currNum = currOutput.textContent;
+}
 function clearFun() {
 	currNum = '';
 	prevNum = '';
 	operator = '';
-	currOutput.textContent = '0';
+	currOutput.textContent = '';
 	prevOutput.textContent = '';
 }
 function add(a, b) {
