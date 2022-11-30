@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 * {
 	box-sizing: border-box;
-	font-family: 'Source Code Pro', monospace;
 }
 body {
 	display: flex;
@@ -10,6 +9,7 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
 	background-color: #285943;
+	font-family: 'Source Code Pro', monospace;
 }
 .calc {
 	display: flex;
